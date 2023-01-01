@@ -15,7 +15,7 @@ const spriteHeight = 523;
 let gameFrame = 0;
 let staggerFrames = 5;
 let spriteAnimations = [];
-let playerState = 'roll';
+let playerState = 'idle';
 
 dropdown.addEventListener('change', (e) => {
     console.log('Change', e.target.value)
