@@ -95,3 +95,11 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/*Vite Defaults End*/
+
+canvas{
+  width: 600px;
+  height: 600px;
+  border: #1a1a1a solid;
+}
