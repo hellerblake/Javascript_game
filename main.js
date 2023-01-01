@@ -1,6 +1,7 @@
 import './style.css'
 import * as dog from "./sprite-animations/dogAnimation.js";
 
+const dropdown = document.getElementById('animations')
 const canvas =document.getElementById('canvas1');
 const ctx = canvas.getContext('2d');
 const CANVAS_WIDTH = canvas.width = 600;
@@ -16,6 +17,11 @@ let staggerFrames = 5;
 let spriteAnimations = [];
 let playerState = 'roll';
 
+dropdown.addEventListener('change', (e) => {
+    console.log('Change', e.target.value)
+    playerState = e.target.value
+})
+
 dog.states.forEach((state,index) => {
     let frames = {
         loc: [],
@@ -27,7 +33,6 @@ dog.states.forEach((state,index) => {
     }
     spriteAnimations[state.name] = frames;
 })
-    console.log(spriteAnimations)
 function animate(){
     ctx.clearRect(0,0, CANVAS_WIDTH, CANVAS_HEIGHT);
     let position= Math.floor(gameFrame/staggerFrames) % spriteAnimations[playerState].loc.length;

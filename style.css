@@ -103,3 +103,9 @@ canvas{
   height: 600px;
   border: #1a1a1a solid;
 }
+.controls{
+  position: absolute;
+  top:50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
